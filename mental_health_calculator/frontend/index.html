@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mental Health Service Resource Planning Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Mental Health Service Resource Planning Calculator</h1>
+    <div id="input-section">
+        <h2>Input Parameters</h2>
+        <form id="calculator-form">
+            <label for="population">Population:</label>
+            <input type="number" id="population" name="population" required><br><br>
+
+            <label for="crisis-type">Crisis Type:</label>
+            <select id="crisis-type" name="crisis-type">
+                <option value="">Peace Time</option>
+                <option value="unemployment_increase">Increase in Unemployment</option>
+                <option value="poverty_increase">Increase in Poverty</option>
+                <option value="immigration_increase">Increase in Immigration</option>
+                <!-- Add other crisis types as needed -->
+            </select><br><br>
+
+            <h3>Resource Allocation Adjustments</h3>
+            <label for="doctor-allocation">Doctor Allocation Ratio:</label>
+            <input type="number" step="0.1" id="doctor-allocation" name="doctor-allocation" value="1.0"><br><br>
+
+            <label for="psychologist-allocation">Psychologist Allocation Ratio:</label>
+            <input type="number" step="0.1" id="psychologist-allocation" name="psychologist-allocation" value="1.0"><br><br>
+
+            <label for="time-allocation">Time Allocation Ratio:</label>
+            <input type="number" step="0.1" id="time-allocation" name="time-allocation" value="1.0"><br><br>
+
+            <button type="submit">Calculate Metrics</button>
+        </form>
+    </div>
+    <div id="output-section">
+        <h2>Calculation Results</h2>
+        <p>Mean Wait Time: <span id="mean-wait-time">-</span></p>
+        <p>Waiting List Length: <span id="waiting-list-length">-</span></p>
+        <p>Severe Cases: <span id="severe-cases">-</span></p>
+        <p>Relapse Rate: <span id="relapse-rate">-</span></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
