@@ -1,4 +1,4 @@
-## 🤖Usage
+## Usage
 
 1. Download all libraries in `requirements.txt` :
 
